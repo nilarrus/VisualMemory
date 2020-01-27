@@ -1,2 +1,2 @@
 # VisualMemory
-Proyecto Final FP Superior D. Aplicaciones Web 
+Projecte Final FP Superior D. Aplicacions Web 
