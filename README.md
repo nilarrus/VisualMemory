@@ -3,9 +3,9 @@ Projecte Final FP Superior D. Aplicacions Web
 
 En la wiki del projecte es pot consultar la base de dades.
 
-Carpeta Docs:
--Totes les especificacions del projecte amb les idees + especificacions amb les hores i fites definides.
+### Carpeta Docs:
+- Totes les especificacions del projecte amb les idees + especificacions amb les hores i fites definides.
 
-Carpeta VisualMemoriP:
--Projecte al complet.
+### Carpeta VisualMemoriP:
+- Projecte al complet.
 
