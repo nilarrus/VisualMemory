@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'homeController@getLogin')->name('Pantalla principal');
+Route::get('/r', 'homeController@getRegister')->name('Pantalla registro');

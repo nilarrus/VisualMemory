@@ -1,0 +1,30 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.mybtn{
+  background: #CC4A14 !important;
+  border-color: #400000 !important;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(255, 215, 56, 0);
+}
+#login .container #login-row #login-column #login-box #login-form{
+  padding: 10px;
+}
+#reg #reg-row #reg-column #reg-box{
+  margin-top: 120px;
+  max-width: 780px;
+  height: 400px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(255, 215, 56, 0);
+}
+#reg #reg-row #reg-column #reg-box #reg-form{
+  padding: 10px;
+}
