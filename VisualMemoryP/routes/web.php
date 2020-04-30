@@ -13,3 +13,6 @@
 
 Route::get('/', 'homeController@getLogin')->name('Pantalla principal');
 Route::get('/r', 'homeController@getRegister')->name('Pantalla registro');
+
+//rutas temporales 
+Route::get('/m', 'homeController@getMenu')->name('Menu Inicial');

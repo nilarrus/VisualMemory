@@ -2,34 +2,23 @@
 
 @section('content')
 
-<div id="login">
-    <h3 class="text-center pt-5">Welcom to survivorMemory </h3>
-    <div class="container">
-        <div id="login-row" class="row justify-content-center align-items-center">
-            <div id="login-column" class="col-md-6">
-                <div id="login-box" class="col-md-12">
-                    <form id="login-form" class="form" action="" method="post">
-                        <h3 class="text-center ">Login</h3>
-                        <div class="form-group">
-                            <label for="username" class="">Username:</label>
-                            <br>
-                            <input type="text" name="username" id="username" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="">Password:</label>
-                            <br>
-                            <input type="password" name="password" id="password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-info btn-md mybtn" value="LogIn">
-                        </div>
-                        <div id="register-link" class="text-right">
-                            <a href="/r" class="">Register here</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
+
+<body class="text-center">
+    <form class="form-box">
+        <img class="mb-4" src="{{URL::asset('img/logo.png')}}" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
+        <label for="inputName" class="sr-only">Nombre</label>
+        <input type="text" id="inputName" class="form-control" placeholder="Nombre" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Requerdame
+            </label>
         </div>
-    </div>
-</div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        <a class="btn btn-lg btn-info btn-block" href="/r" role="button">Registar</a>
+        <p class="mt-5 mb-3 text-muted">© 2020-2020</p>
+    </form>
+</body>
 @stop

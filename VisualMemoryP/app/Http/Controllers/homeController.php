@@ -12,4 +12,8 @@ class homeController extends Controller
     public function getRegister(){
         return view('blocks.register');
     }
+    public function getMenu()
+    {
+        return view('blocks.menu');
+    }
 }

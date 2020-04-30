@@ -11,9 +11,9 @@
     <title>Visual Memory</title>
 </head>
 <body>
-    <div class="box">
+    
         @yield('content')
-    </div>
+    
     
     
     <!-- Optional JavaScript -->
