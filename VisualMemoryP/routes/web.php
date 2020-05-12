@@ -16,3 +16,4 @@ Route::get('/r', 'homeController@getRegister')->name('Pantalla registro');
 
 //rutas temporales 
 Route::get('/m', 'homeController@getMenu')->name('Menu Inicial');
+Route::get('/1p', 'homeController@getUnPlayer')->name('Un jugador');

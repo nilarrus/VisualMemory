@@ -53,8 +53,49 @@ body {
         user-select: none;
       }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.menu {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  margin: auto;
+}
+
+.game {
+  width: 100%;
+  max-width: 60%;
+  padding: 2%;
+  margin: auto;
+}
+.centrado{
+  display: flex;
+  justify-content: center;
+}
+#table{
+  border-top: 10px solid red;
+  border-left: 10px solid red;
+  border-right: 10px solid red;
+  border-bottom: 10px solid red;
+  align-self:center;
+}
+
+.celda {
+  background-color: burlywood;
+  
+}
+
+.infoTop {
+  margin-top: 10px;
+  align-self:center;
+}
+.infoTop td{
+  text-align: center;
+}
+#time,#fails{
+  font-size: 3em;
+}

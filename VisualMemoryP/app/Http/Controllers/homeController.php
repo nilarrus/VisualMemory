@@ -16,4 +16,8 @@ class homeController extends Controller
     {
         return view('blocks.menu');
     }
+    public function getUnPlayer()
+    {
+        return view('blocks.oneP');
+    }
 }
