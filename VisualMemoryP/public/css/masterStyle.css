@@ -77,16 +77,18 @@ body {
   justify-content: center;
 }
 #table{
-  border-top: 10px solid red;
-  border-left: 10px solid red;
-  border-right: 10px solid red;
-  border-bottom: 10px solid red;
+  border-top: 7px solid #770202;
+  border-left: 7px solid #770202;
+  border-right: 7px solid #770202;
+  border-bottom: 7px solid #770202;
   align-self:center;
 }
 
 .celda {
-  background-color: burlywood;
-  
+  border: 3px solid yellowgreen;
+  background-color: wheat;
+  width: 70px;
+  height: 70px;
 }
 
 .infoTop {

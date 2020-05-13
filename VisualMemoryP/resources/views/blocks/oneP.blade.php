@@ -7,9 +7,14 @@
 
 <script> window.onload = function()
     {
+        var Nceles = 3;
+        generarTables(Nceles,Nceles);
+        
+        //overlay
         on();
-        var auto_celda = "{{URL::asset('img/celda.png')}}";
-        generarTables(3,3,auto_celda);
+        
+        //celes correctes
+        celesCorrectes(Nceles,Nceles);
     }
 </script>
 <body class="text-center">
@@ -34,7 +39,7 @@
                         <td>
                             <img class="mb-2" src="{{URL::asset('img/wrong.png')}}" alt="" width="65" height="65">
                         </td>
-                        <td><p id="fails">00</p></td>
+                        <td><p id="fails">0</p></td>
                     </tr>
                 </tbody>
                 
