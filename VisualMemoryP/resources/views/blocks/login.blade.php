@@ -16,8 +16,9 @@
                 <input type="checkbox" value="remember-me"> Requerdame
             </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log-in</button>
         <a class="btn btn-lg btn-info btn-block" href="/r" role="button">Registar</a>
+        <a class="btn btn-lg btn-warning btn-block" href="/m" role="button">Jugar sin registro</a>
         <p class="mt-5 mb-3 text-muted">© 2020-2020</p>
     </form>
 </body>

@@ -21,7 +21,10 @@
     <div id="overlay" class="gameStart">
         <div id="content">
             <h1>¡EMPEZAMOS!</h1>
-            <button class="btn btn-lg btn-primary btn-block" onclick="startGame()">Go</button>
+            <div>
+                <button class="btn btn-lg btn-primary btn-block" onclick="startGame()">Go</button>
+            </div>
+            <p> Se mostraran los cuadrados que tienes que recordar, al acabar quando el borde este en Verde empieza la partida</p>
         </div>
     </div>
 
@@ -32,14 +35,18 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img class="mb-2" src="{{URL::asset('img/clock.png')}}" alt="" width="65" height="65">
+                            <p id="time">0</p>
                             
                         </td>
-                        <td><p id="time">00:00</p></td>
+                        <td>
+                            <img class="mb-2" src="{{URL::asset('img/clock.png')}}" alt="" width="65" height="65">
+                        </td>
+                        <td>
+                            <p id="fails">0</p>
+                        </td>
                         <td>
                             <img class="mb-2" src="{{URL::asset('img/wrong.png')}}" alt="" width="65" height="65">
                         </td>
-                        <td><p id="fails">0</p></td>
                     </tr>
                 </tbody>
                 

@@ -77,10 +77,7 @@ body {
   justify-content: center;
 }
 #table{
-  border-top: 7px solid #770202;
-  border-left: 7px solid #770202;
-  border-right: 7px solid #770202;
-  border-bottom: 7px solid #770202;
+  border: 7px solid #770202;
   align-self:center;
 }
 
