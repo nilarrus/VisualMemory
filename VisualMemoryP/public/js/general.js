@@ -3,44 +3,69 @@ var celesN;
 var IDinterval;
 var finJuego =0 ;
 
-
+/**
+ * Fin del juego 
+ * limpiamos el timer
+ * canviamos el borde para el usuario note el final del juego 
+ * 
+ */
 function finalJuego(){
     clearInterval(IDinterval); 
     document.getElementById("table").style.border=("7px solid black");
+    deshabilitarMoiseOptions();
+    //document.getElementsByClassName("nextLevel")[0].style.visibility = "visible";
 }
-
+/**
+ * Gestion del click en cada celda detecta si es una celda correcta o no 
+ * y lanza el final del juego quando estan todas las celdas iniciales seleccionadas.
+ * @param {Integer} nCel 
+ */
 function detectar(nCel) {
     //console.log("numero de la celda: "+nCel);
     var celdas = document.getElementsByClassName("celda");
-    if(celesN.includes(nCel)){
-        celdas[nCel].style.backgroundColor = "green";
-        finJuego = finJuego +1;
-        //fin partida actual
-        if(celesCorr.length == finJuego){
-            finalJuego();
+    if(nCel>0){
+        if(celesN.includes(nCel)){
+            celdas[nCel].style.backgroundColor = "green";
+            finJuego = finJuego +1;
+            //fin partida actual
+            if(celesCorr.length == finJuego){
+                finalJuego();
+            }
+        }else{
+            setTimeout(function(){
+                celdas[nCel].style.backgroundColor = "wheat";
+            }, 2000);
+            celdas[nCel].style.backgroundColor = "red";
+            
+            var txt = parseInt(document.getElementById("fails").textContent)+1;
+            document.getElementById("fails").innerText =txt;
         }
-        
-    }else{
-        setTimeout(function(){
-            celdas[nCel].style.backgroundColor = "wheat";
-        }, 2000);
-        celdas[nCel].style.backgroundColor = "red";
-         
-        var txt = parseInt(document.getElementById("fails").textContent)+1;
-        document.getElementById("fails").innerText =txt;
     }
 }
 /**
- * coloca el onclick, onmousover, onmousout en cada celda para poder interactuar y jugar
+ * Habilita el onclick en cada celda
  */
-function generarMouseOptions() {
-    var lista = document.getElementsByClassName("celda");
-    
+function habilitarMouseOptions() {
+    //var lista = document.getElementsByClassName("celda");
+    var lista = $("td.celda");
     for(var index = 0; index<lista.length ; index++ ){
-
         lista[index].setAttribute("onclick","detectar("+index+")");
-        
-    }    
+        /*lista.on("click",function () {
+            detectar(index);
+        });*/
+    }   
+}
+/**
+ * Deshabilita el onclick en cada celda
+ */
+function deshabilitarMoiseOptions() {
+    var lista = $("td.celda");
+    for(var index = 0; index<lista.length ; index++ ){
+        lista[index].setAttribute("onclick","detectar(-"+1+")");
+        /*lista.on("click",function () {
+            detectar(index);
+        });*/
+    }  
 }
 /**
  * genera un numero random y comprueba que no se repita.
@@ -90,7 +115,7 @@ function playCelesCorrectes(Ccorrectes) {
             //console.log(list[c]);
             list[c].style.backgroundColor='wheat';
         }
-        generarMouseOptions();
+        habilitarMouseOptions();
         playTime();
         document.getElementById("table").style.border=("7px solid green");
     }, 3000);

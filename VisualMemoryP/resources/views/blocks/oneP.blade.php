@@ -15,17 +15,19 @@
         
         //celes correctes
         celesCorrectes(Nceles,Nceles);
+        document.getElementsByClassName("nextLevel")[0].style.visibility = "hidden";
     }
 </script>
 <body class="text-center">
     <div id="overlay" class="gameStart">
         <div id="content">
             <h1>¡EMPEZAMOS!</h1>
-            <div>
-                <button class="btn btn-lg btn-primary btn-block" onclick="startGame()">Go</button>
-            </div>
-            <p> Se mostraran los cuadrados que tienes que recordar, al acabar quando el borde este en Verde empieza la partida</p>
+            <button class="btn btn-lg btn-primary btn-block" onclick="startGame()">Go</button>
+            <p> Se mostraran los cuadrados que tienes que recordar</p>
+            <p> quando el borde este en Verde empieza la partida</p>
+            <p> selecciona todos los quadrados marcados en verde  en el menor tiempo posible</p>
         </div>
+        
     </div>
 
     <div class="game">
@@ -49,15 +51,18 @@
                         </td>
                     </tr>
                 </tbody>
-                
             </table>
         </div>
-        <div class="centrado">
+        <div class="centrado"> 
             <table id="table">
             <!-- generado por js -->
             </table>
         </div>
-        
+        <div class="centrado"> 
+            <div class="nextLevel">
+                <a class="btn btn-lg btn-info btn-block" href="#" role="button">Next</a>
+            </div>
+        </div>
     </div>
 </body>
 @stop

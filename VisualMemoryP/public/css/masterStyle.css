@@ -1,9 +1,6 @@
-
-
 body {
   height: 100%;
 }
-
 body {
   display: -ms-flexbox;
   display: flex;
@@ -43,29 +40,25 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
-  .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
 }
-
 .menu {
   width: 100%;
   max-width: 400px;
   padding: 15px;
   margin: auto;
 }
-
 .game {
   width: 100%;
   max-width: 60%;
@@ -80,14 +73,12 @@ body {
   border: 7px solid #770202;
   align-self:center;
 }
-
 .celda {
   border: 3px solid yellowgreen;
   background-color: wheat;
   width: 70px;
   height: 70px;
 }
-
 .infoTop {
   margin-top: 10px;
   align-self:center;
@@ -97,4 +88,7 @@ body {
 }
 #time,#fails{
   font-size: 3em;
+}
+.nexLevel{
+ margin-top: 1%;
 }
