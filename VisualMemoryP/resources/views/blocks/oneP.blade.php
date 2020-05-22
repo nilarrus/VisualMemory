@@ -26,6 +26,7 @@
             <p> Se mostraran los cuadrados que tienes que recordar</p>
             <p> quando el borde este en Verde empieza la partida</p>
             <p> selecciona todos los quadrados marcados en verde  en el menor tiempo posible</p>
+            <p> las celdas erroneas se marcan en rojo unos instantes</p>
         </div>
         
     </div>

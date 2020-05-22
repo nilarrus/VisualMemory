@@ -23,23 +23,21 @@ function finalJuego(){
 function detectar(nCel) {
     //console.log("numero de la celda: "+nCel);
     var celdas = document.getElementsByClassName("celda");
-    if(nCel>0){
-        if(celesN.includes(nCel)){
-            celdas[nCel].style.backgroundColor = "green";
-            finJuego = finJuego +1;
-            //fin partida actual
-            if(celesCorr.length == finJuego){
-                finalJuego();
-            }
-        }else{
-            setTimeout(function(){
-                celdas[nCel].style.backgroundColor = "wheat";
-            }, 2000);
-            celdas[nCel].style.backgroundColor = "red";
-            
-            var txt = parseInt(document.getElementById("fails").textContent)+1;
-            document.getElementById("fails").innerText =txt;
+    if(celesN.includes(nCel)){
+        celdas[nCel].style.backgroundColor = "green";
+        finJuego = finJuego +1;
+        //fin partida actual
+        if(celesCorr.length == finJuego){
+            finalJuego();
         }
+    }else{
+        setTimeout(function(){
+            celdas[nCel].style.backgroundColor = "wheat";
+        }, 1000);
+        celdas[nCel].style.backgroundColor = "red";
+        
+        var txt = parseInt(document.getElementById("fails").textContent)+1;
+        document.getElementById("fails").innerText =txt;
     }
 }
 /**
