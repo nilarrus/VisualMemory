@@ -4,11 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class homeController extends Controller
+class HomeController extends Controller
 {
-    public function getLogin(){
-        return view('blocks.login');
+
+    public function __contruct()
+    {
+        $this->middleware('auth');
     }
+
+    public function index()
+    {
+        return view('auth.login');
+    }
+
+    
+    
+    // controladores temporales
     public function getRegister(){
         return view('blocks.register');
     }
