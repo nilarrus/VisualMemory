@@ -18,7 +18,12 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">Solo contra infinitos niveles, demuestra que puedes recorda todas las celdas</p>
-                                    <a class="btn btn-lg btn-primary" href="#" role="button">Un jugador</a>
+                                    <form action="{{ route('gp1')}}" method="post">
+                                        @csrf
+                                        <input type="text" name="level" id="" hidden value="1">
+                                        <button class="btn btn-lg btn-primary" type="submit">Un Jugador</button>
+                                    </form>
+                                    <!-- <a class="btn btn-lg btn-primary" href="{{ route('gp1')}} " role="button">Un jugador</a> -->
                                 </div>
                             </div>
                             <div class="row justify-content-md-center">

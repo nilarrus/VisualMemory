@@ -11,7 +11,7 @@ class LoginController extends Controller
   
     use AuthenticatesUsers;
     
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/menu';
     /**
      * Create a new controller instance.
      *
@@ -40,7 +40,7 @@ class LoginController extends Controller
         
         if(auth()->attempt(array($fieldType => $input['username'], 'password' => $input['password'])))
         {
-            return redirect()->route('home');
+            return redirect()->route('menu');
         }else{
             return redirect()->route('login')
                 ->with('error','Email-Address And Password Are Wrong.');
