@@ -24,13 +24,13 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">El que gane mas rapido sobrevive el que no cae el ultimo se lleva la gloria</p>
-                                    <a class="btn btn-lg btn-success" href="#" role="button">Multijugador</a>
+                                    <a class="btn btn-lg bg-success" href="#" role="button">Multijugador</a>
                                 </div>
                             </div>
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">Mapas no incluidos en un jugador por su dificultad, entre otras cosas</p>
-                                    <a class="btn btn-lg btn-warning" href="#" role="button">Mapas adicionales</a>
+                                    <a class="btn btn-lg btn-info" href="#" role="button">Mapas adicionales</a>
                                 </div>
                             </div>
                             <div class="row justify-content-md-center">
