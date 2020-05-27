@@ -137,6 +137,7 @@ function relog() {
 function playTime() {
     IDinterval = setInterval(relog,1000);
 }
+
 /**
  * genera la tabla de forma dinamica correspondiente al numero del nivell pasado por paramentro.
  * @param {Integer} x 
