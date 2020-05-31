@@ -1,48 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-1 jugador nivel = @php echo $_POST["level"]; @endphp
+<!-- JavaScript -->
+<script src="{{ URL::asset('js/efects.js')}}"></script>
+<script src="{{ URL::asset('js/general.js')}}"></script>
+
 <div class="container">
-    <div class="col border border-dark text-center">
-        <div class="row">
-            <div class="col-sm">1</div>
-            <div class="col-sm">2</div>
-            <div class="col-sm">3</div>
-        </div>
-        <div class="row">
-            <div class="col-sm">1</div>
-            <div class="col-sm">2</div>
-            <div class="col-sm">3</div>
-        </div>
-        <div class="row">
-            <div class="col-sm">1</div>
-            <div class="col-sm">2</div>
-            <div class="col-sm">3</div>
-        </div>
-    </div>
     
-</div>
-
-
-
-
-<!--
-<script> window.onload = function()
-    {
-        var Nceles = 3;
-        generarTables(Nceles,Nceles);
-        
-        //overlay
-        on();
-        
-        //celes correctes
-        celesCorrectes(Nceles,Nceles);
-        document.getElementsByClassName("nextLevel")[0].style.visibility = "hidden";
-    }
-</script>
-
     <div class="text-center">
-        <div id="overlay" class="gameStart">
+        <div id="Inicio" class="gameStart">
         <div id="content">
             <h1>¡EMPEZAMOS!</h1>
             <button class="btn btn-lg btn-primary btn-block" onclick="startGame()">Go</button>
@@ -51,45 +17,59 @@
             <p> selecciona todos los quadrados marcados en verde  en el menor tiempo posible</p>
             <p> las celdas erroneas se marcan en rojo unos instantes</p>
         </div>
-        
     </div>
 
-    <div class="game">
-        <h1 id="level">Level 1</h1>
-        <div class="centrado">        
-            <table class="infoTop">
-                <tbody>
-                    <tr>
-                        <td>
-                            <p id="time">0</p>
-                            
-                        </td>
-                        <td>
-                            <img class="mb-2" src="{{URL::asset('img/clock.png')}}" alt="" width="65" height="65">
-                        </td>
-                        <td>
-                            <p id="fails">0</p>
-                        </td>
-                        <td>
-                            <img class="mb-2" src="{{URL::asset('img/wrong.png')}}" alt="" width="65" height="65">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div id="header" class="mb-4">
+        <div id="level" class="row mb-0 mt-0">           
+            <div class="col text-right">Nivel</div>
+            <div id="nivel" class="col text-left">@php echo $_POST["level"];@endphp</div> 
         </div>
-        <div class="centrado"> 
-            <table id="table">
-            -->
-            <!-- generado por js -->
-            <!--
-            </table>
-        </div>
-        <div class="centrado"> 
-            <div class="nextLevel">
-                <a class="btn btn-lg btn-info btn-block" href="#" role="button">Next</a>
+        <div class="row mt-0 mb-0">
+            <div class="col">
+                <div class="row">
+                    <div class="col text-right">
+                        <img src="{{URL::asset('img/clock.png')}}" alt="" width="45" height="45">
+                    </div>
+                    <div class="col text-left">
+                        <p id="gameTime">0</p>
+                    </div>
+                </div>           
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col text-right">
+                        <img src="{{URL::asset('img/wrong.png')}}" alt="" width="45" height="45">
+                    </div>
+                    <div class="col text-left">
+                        <p id="gameFails">0</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
--->    
+    <div class="game centrado">     
+        <table id="table" class="table-game">
+            
+                <!-- generado por js -->
+            
+        </table>
+    </div>        
+</div>
+<script> window.onload = function()
+    {
+        var nivel = parseInt($('#nivel').text());
+        
+        var Nceles = nivel+2;
+        generarTables(Nceles,Nceles);
+        
+        //overlay inicial
+        on("Inicio");
+        
+        //celes correctes
+        celesCorrectes(Nceles,Nceles);
+        /*
+        document.getElementsByClassName("nextLevel")[0].style.visibility = "hidden";
+        */
+    }
+</script>
 @endsection

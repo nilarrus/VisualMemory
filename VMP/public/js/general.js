@@ -36,8 +36,8 @@ function detectar(nCel) {
         }, 1000);
         celdas[nCel].style.backgroundColor = "red";
         
-        var txt = parseInt(document.getElementById("fails").textContent)+1;
-        document.getElementById("fails").innerText =txt;
+        var txt = parseInt(document.getElementById("gameFails").textContent)+1;
+        document.getElementById("gameFails").innerText =txt;
     }
 }
 /**
@@ -48,9 +48,6 @@ function habilitarMouseOptions() {
     var lista = $("td.celda");
     for(var index = 0; index<lista.length ; index++ ){
         lista[index].setAttribute("onclick","detectar("+index+")");
-        /*lista.on("click",function () {
-            detectar(index);
-        });*/
     }   
 }
 /**
@@ -60,9 +57,6 @@ function deshabilitarMoiseOptions() {
     var lista = $("td.celda");
     for(var index = 0; index<lista.length ; index++ ){
         lista[index].setAttribute("onclick","detectar(-"+1+")");
-        /*lista.on("click",function () {
-            detectar(index);
-        });*/
     }  
 }
 /**
@@ -127,9 +121,9 @@ function playCelesCorrectes(Ccorrectes) {
  */
 function relog() {
     //console.log(document.getElementById("time").textContent);
-    var reg = document.getElementById("time").textContent
+    var reg = document.getElementById("gameTime").textContent
     var time =parseInt(reg)+1;
-    document.getElementById("time").innerHTML = time;
+    document.getElementById("gameTime").innerHTML = time;
 }
 /**
  * Lanzar el tiempo de juego
@@ -140,40 +134,31 @@ function playTime() {
 
 /**
  * genera la tabla de forma dinamica correspondiente al numero del nivell pasado por paramentro.
- * @param {Integer} x 
- * @param {Integer} y 
+ * @param {Integer} rows 
+ * @param {Integer} cols 
  */
-function generarTables(x,y) {
-    //seleccionamos la tabla
-    var tlb = document.getElementById("table");
-    //creamos el elemento tbody
-    var tblBody = document.createElement("tbody");
-    
-    //creacion de las celdas
-    for(var row=0; row<x; row++){
-        var r = document.createElement("tr");
-
-        for(var col = 0; col<y; col++){
-            
-            var cell = document.createElement("td");            
-            var att = document.createAttribute("class");
- 
-            att.value="celda";
-            cell.setAttributeNode(att);
-            //cell.appendChild(img);
-            r.appendChild(cell);
-
+function generarTables(rows,cols) {
+    //generamos un tbody
+    var tbody = $('<tbody>');
+    //generamos las filas y las columnas en funcion de los elementos pasados por parametro.
+    for (let row = 0; row < rows; row++) {
+        var tr = $('<tr>');
+        for (let col = 0; col < cols; col++) {
+            //añadimos las columnas a las filas
+            tr.append($('<td>').attr('class','celda'));
         }
-        //añadimos el contenido al body
-        tblBody.appendChild(r);
+        //añadimos las filas al body de la tabla
+        tbody.append(tr);
     }
-    // añadimos el tbody dentro de la tabla
-    tlb.appendChild(tblBody);
+    //añadimos la nueva estructura del tbody a la tabla del html.
+    $('#table').append(tbody);
 }
 /**
  * Lanzador de funciones en cascada para el funcionamiento del juego.
  */
 function startGame() {
-    off();
+    //Escondemos el overlay con la informacion inicial.
+    off("Inicio");
+    //console.log(celesCorr);
     playCelesCorrectes(celesCorr);
 }

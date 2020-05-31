@@ -1,12 +1,12 @@
 /**
- * Mostrar overlay
+ * Mostrar overlay pasando por parametro el nombre del elemento
  */
-function on() {
-    document.getElementById("overlay").style.display = "block";
+function on(elemento) {
+    document.getElementById(elemento).style.display = "block";
 }
 /**
  * Esconder el overlay
  */
-function off() {
-    document.getElementById("overlay").style.display = "none";
+function off(elemento) {
+    document.getElementById(elemento).style.display = "none";
 }

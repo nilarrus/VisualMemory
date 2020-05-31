@@ -1,27 +1,13 @@
 
-.text-center {
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-}
-.game {
-  width: 100%;
-  max-width: 60%;
-  padding: 2%;
-  margin: auto;
+.game{
+  align-self:center;
 }
 .centrado{
   display: flex;
   justify-content: center;
 }
-#table{
+.table-game{
   border: 7px solid #770202;
-  align-self:center;
 }
 .celda {
   border: 3px solid yellowgreen;
@@ -29,16 +15,6 @@
   width: 70px;
   height: 70px;
 }
-.infoTop {
-  margin-top: 10px;
-  align-self:center;
-}
-.infoTop td{
-  text-align: center;
-}
-#time,#fails{
-  font-size: 3em;
-}
-.nexLevel{
- margin-top: 1%;
+#gameTime,#gameFails,#level{
+  font-size: 2em;
 }

@@ -10,18 +10,19 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/general.js')}}"></script>
-    <script src="{{ asset('js/efects.js')}}"></script>
-    <script src="{{ asset('js/jquery-3.3.1.js')}}"></script>
+    <script src="{{ URL::asset('js/app.js') }}" defer></script>
+    <script src="{{ URL::asset('js/general.js')}}"></script>
+    <script src="{{ URL::asset('js/efects.js')}}"></script>
+    <script src="{{ URL::asset('js/jquery-3.3.1.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/masterStyle.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/efects.css')}}">
    
 
 
