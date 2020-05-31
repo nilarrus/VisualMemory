@@ -10,5 +10,5 @@ En la wiki del projecte es pot consultar la base de dades.
 - Projecte al complet.
 
 ## Carpeta VisualMemoryP:
-- control de danys.
+- control de d'anys.
 
