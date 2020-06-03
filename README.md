@@ -9,6 +9,3 @@ En la wiki del projecte es pot consultar la base de dades.
 ## Carpeta VMP:
 - Projecte al complet.
 
-## Carpeta VisualMemoryP:
-- control de d'anys.
-
