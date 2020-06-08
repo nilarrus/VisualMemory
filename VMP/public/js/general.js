@@ -13,7 +13,12 @@ function finalJuego(){
     clearInterval(IDinterval); 
     document.getElementById("table").style.border=("7px solid black");
     deshabilitarMoiseOptions();
-    //document.getElementsByClassName("nextLevel")[0].style.visibility = "visible";
+
+    $("#levelGame").text("Nivel: "+$("#nivel").text());
+    $("#timeGame").text("Tiempo: "+$("#gameTime").text()+"s");
+    $("#failsGame").text("Fallos: "+$("#gameFails").text());
+    
+    on("Fin");
 }
 /**
  * Gestion del click en cada celda detecta si es una celda correcta o no 

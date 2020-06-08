@@ -18,7 +18,54 @@
             <p> las celdas erroneas se marcan en rojo unos instantes</p>
         </div>
     </div>
-
+    <div class="text-center">
+        <div id="Fin" class="gameEnd"> 
+        <div id="content">
+            <div class="row cajaFin">
+                <div class="col">
+                    <div id="InfoGame" class="row">
+                        <div class="col">
+                            <p id="levelGame"></p>
+                        </div>
+                        <div class="col">
+                            <p id="timeGame"></p>
+                        </div>
+                        <div class="col">
+                            <p id="failsGame"></p>
+                        </div>
+                    </div>
+                    <!-- <div id="InfoTopPlayer" class="row">
+                        <div class="col">
+                            <p>Record:</p>
+                        </div>
+                        <div class="col">
+                            <p id="levelTopP">Nivel</p>
+                        </div>
+                        <div class="col">
+                            <p id="timeTopP">Time</p>
+                        </div>
+                        <div class="col">
+                            <p id="failsTopP">Fails</p>
+                        </div>
+                    </div>-->
+                    <div class="row">
+                        <div class="col">
+                            <form action="{{ route('gp1')}}" method="post">
+                                @csrf
+                                <input type="text" name="level" id="" hidden value={{ intval($_POST["level"])+1}}>
+                                <input type="text" name="time" id="" hidden value="0">
+                                <input type="text" name="fail" id="" hidden value="0">
+                                <button class="btn btn-lg btn-primary" type="submit">NEXT</button>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-lg btn-primary" href="{{route('menu')}}" role="button">Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="header" class="mb-4">
         <div id="level" class="row mb-0 mt-0">           
             <div class="col text-right">Nivel</div>
@@ -31,7 +78,7 @@
                         <img src="{{URL::asset('img/clock.png')}}" alt="" width="45" height="45">
                     </div>
                     <div class="col text-left">
-                        <p id="gameTime">0</p>
+                        <p id="gameTime"> @php echo $_POST["time"];@endphp </p>
                     </div>
                 </div>           
             </div>
@@ -41,7 +88,7 @@
                         <img src="{{URL::asset('img/wrong.png')}}" alt="" width="45" height="45">
                     </div>
                     <div class="col text-left">
-                        <p id="gameFails">0</p>
+                        <p id="gameFails">@php echo $_POST["fail"];@endphp</p>
                     </div>
                 </div>
             </div>
@@ -63,13 +110,12 @@
         generarTables(Nceles,Nceles);
         
         //overlay inicial
+        off("Fin");
         on("Inicio");
+        
         
         //celes correctes
         celesCorrectes(Nceles,Nceles);
-        /*
-        document.getElementsByClassName("nextLevel")[0].style.visibility = "hidden";
-        */
     }
 </script>
 @endsection

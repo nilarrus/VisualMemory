@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
                 'user_gm' => $emailF,
                 'time' => mt_rand(1,50),
                 'fails'=> mt_rand(1,15),
-                'Lastlevel'=> mt_rand(1,4),
+                'Lastlevel'=> mt_rand(1,3),
             ]);
             
         }

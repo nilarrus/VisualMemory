@@ -22,9 +22,10 @@
                                     <form action="{{ route('gp1')}}" method="post">
                                         @csrf
                                         <input type="text" name="level" id="" hidden value="1">
+                                        <input type="text" name="time" id="" hidden value="0">
+                                        <input type="text" name="fail" id="" hidden value="0">
                                         <button class="btn btn-lg btn-primary" type="submit">Un Jugador</button>
                                     </form>
-                                    <!-- <a class="btn btn-lg btn-primary" href="{{ route('gp1')}} " role="button">Un jugador</a> -->
                                 </div>
                             </div>
                             <div class="row justify-content-md-center">

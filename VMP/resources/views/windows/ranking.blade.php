@@ -12,7 +12,7 @@
            <th scope="col">Username</th>
            <th scope="col">Tiempo</th>
            <th scope="col">Fallos</th>
-           <th scope="col">Utimo nivel</th>
+           <th scope="col">Nivel mas alto</th>
         </tr>
         </thead>
         <tbody>

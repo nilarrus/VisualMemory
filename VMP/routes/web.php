@@ -15,4 +15,4 @@ Route::get('/menu', 'HomeController@index')->name('menu');
 Route::post('/gp1', 'GamePlayerOne@game')->name('gp1');
 
 //ruta temporal per al ranking
-Route::get('/ranking', 'rank@getRanking')->name('rank');
+Route::get('/r', 'rank@getRanking')->name('rank');
