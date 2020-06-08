@@ -59,6 +59,9 @@
                             </form>
                         </div>
                         <div class="col">
+                            <a class="btn btn-lg btn-primary" href="{{route('rank')}}" role="button">Ranking Global</a>
+                        </div>
+                        <div class="col">
                             <a class="btn btn-lg btn-primary" href="{{route('menu')}}" role="button">Menu</a>
                         </div>
                     </div>
