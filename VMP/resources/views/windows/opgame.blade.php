@@ -57,12 +57,20 @@
                                 <input type="text" name="fail" id="" hidden value="0">
                                 <button class="btn btn-lg btn-primary" type="submit">NEXT</button>
                             </form>
+                            
                         </div>
                         <div class="col">
                             <a class="btn btn-lg btn-primary" href="{{route('rank')}}" role="button">Ranking Global</a>
                         </div>
                         <div class="col">
-                            <a class="btn btn-lg btn-primary" href="{{route('menu')}}" role="button">Menu</a>
+                            <form action="{{ route('store')}}" method="post">
+                                @csrf
+                                <input type="text" name="username" id="uStore" hidden value="0">
+                                <input type="text" name="level" id="nStore" hidden value={{ intval($_POST["level"])+1}}>
+                                <input type="text" name="time" id="tStore" hidden value="0">
+                                <input type="text" name="fail" id="fStore" hidden value="0">
+                                <button class="btn btn-lg btn-primary" type="submit">Guardar y Volver al menu</button>
+                            </form>
                         </div>
                     </div>
                 </div>

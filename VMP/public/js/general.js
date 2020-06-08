@@ -18,6 +18,13 @@ function finalJuego(){
     $("#timeGame").text("Tiempo: "+$("#gameTime").text()+"s");
     $("#failsGame").text("Fallos: "+$("#gameFails").text());
     
+
+    $("#uStore").val($("#navbarDropdown").text());
+    $("#nStore").val($("#nivel").text());
+    $("#tStore").val($("#gameTime").text());
+    $("#fStore").val($("#gameFails").text());
+
+
     on("Fin");
 }
 /**

@@ -20,6 +20,12 @@ class DatabaseSeeder extends Seeder
             'username' => 'nilarrus',
             'password' => Hash::make('12345678'),
         ]);
+        App\Ranking::create([
+            'user_gm' => 'ng@gmail.com',
+            'time' => 0,
+            'fails'=> 0,
+            'Lastlevel'=> 1,
+        ]);
         $faker = Faker\Factory::create();
 
         for($i = 0; $i < 100; $i++) {

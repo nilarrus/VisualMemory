@@ -31,7 +31,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('#') }}">
+                <a class="navbar-brand" href="{{ route('menu') }}">
                     <img src="{{URL::asset('img/logo.png')}}" alt="" width="40" height="40">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -63,7 +63,7 @@
                         @else
                             <li class="nav-item dropdown bg-dark text-white">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

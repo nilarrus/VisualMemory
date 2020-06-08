@@ -54,6 +54,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        App\Ranking::create([
+            'user_gm' => $data['email'],
+            'time' => 0,
+            'fails'=> 0,
+            'Lastlevel'=> 0,
+        ]);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
