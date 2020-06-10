@@ -34,15 +34,17 @@
                                          El que no cae<br>
                                          El ultimo se lleva la gloria
                                         </p>
-                                    <a class="btn btn-lg bg-success" href="#" role="button">Multijugador</a>
+                                    <a class="btn btn-lg bg-success disabled" href="#" role="button" aria-disabled="true">Multijugador</a>
                                 </div>
                             </div>
+                            <!--
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">Mapas no incluidos en un jugador por su dificultad, entre otras cosas</p>
-                                    <a class="btn btn-lg btn-info" href="#" role="button">Mapas adicionales</a>
+                                    <a class="btn btn-lg btn-info disabled" href="#" role="button" aria-disabled="true">Mapas adicionales</a>
                                 </div>
                             </div>
+                            -->
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mt-2 mb-2">© 2020-2020</p>

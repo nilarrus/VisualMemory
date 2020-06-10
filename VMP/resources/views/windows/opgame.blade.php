@@ -60,7 +60,7 @@
                             
                         </div>
                         <div class="col">
-                            <a class="btn btn-lg btn-primary" href="{{route('rank')}}" role="button">Ranking Global</a>
+                            <a class="btn btn-lg btn-primary" target="_blank" href="{{route('rank')}}" role="button">Ranking Global</a>
                         </div>
                         <div class="col">
                             <form action="{{ route('store')}}" method="post">

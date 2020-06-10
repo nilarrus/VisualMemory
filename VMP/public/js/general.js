@@ -7,7 +7,7 @@ var finJuego =0 ;
  * Fin del juego 
  * limpiamos el timer
  * canviamos el borde para el usuario note el final del juego 
- * 
+ * Rellenamos el overlay del fin del nivell
  */
 function finalJuego(){
     clearInterval(IDinterval); 
