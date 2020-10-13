@@ -18,7 +18,7 @@
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">Solo contra infinitos niveles <br>
-                                        Demuestra que puedes recuerda todas las celdas</p>
+                                        Demuestra que puedes, recuerda todas las celdas y gana</p>
                                     <form action="{{ route('gp1')}}" method="post">
                                         @csrf
                                         <input type="text" name="level" id="" hidden value="1">
@@ -28,6 +28,7 @@
                                     </form>
                                 </div>
                             </div>
+                            <!--
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">
                                     <p class="mb-2">El que gane mas rapido sobrevive <br>
@@ -37,6 +38,7 @@
                                     <a class="btn btn-lg bg-success disabled" href="#" role="button" aria-disabled="true">Multijugador</a>
                                 </div>
                             </div>
+                            -->
                             <!--
                             <div class="row justify-content-md-center">
                                 <div class="col-md-auto mb-5">

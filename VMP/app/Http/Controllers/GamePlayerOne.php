@@ -13,11 +13,6 @@ class GamePlayerOne extends Controller
         $this->middleware('auth');
     }
 
-    public function game()
-    {
-        return view('windows.opgame');
-    }
-
     public function store(Request $request){
         $user = User::where('username',$request->username)->first();
         $rank = Ranking::where('user_gm',$user->email)->first();
@@ -30,5 +25,11 @@ class GamePlayerOne extends Controller
         
     
         return view('menu');
+    }
+
+    public function launchGame(){
+
+        return view('windows.opgame');
+
     }
 }

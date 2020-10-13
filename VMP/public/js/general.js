@@ -102,7 +102,8 @@ function celesCorrectes(x,y) {
         var celda = generarNRandom(total);       
         celesCorr[index] = celdas.item(celda);
         celesN[index] = celda;
-        //console.log(celesCorr[index]);
+        console.log(celesCorr[index]);
+        console.log(celesN[index]);
     } 
 }
 /**
@@ -143,7 +144,6 @@ function relog() {
 function playTime() {
     IDinterval = setInterval(relog,1000);
 }
-
 /**
  * genera la tabla de forma dinamica correspondiente al numero del nivell pasado por paramentro.
  * @param {Integer} rows 
@@ -168,7 +168,10 @@ function generarTables(rows,cols) {
 /**
  * Lanzador de funciones en cascada para el funcionamiento del juego.
  */
-function startGame() {
+function startGame(Nceles) {
+    console.log(Nceles);
+    //Generamos las celdas correctas para esta partida.
+    celesCorrectes(Nceles,Nceles);
     //Escondemos el overlay con la informacion inicial.
     off("Inicio");
     //console.log(celesCorr);

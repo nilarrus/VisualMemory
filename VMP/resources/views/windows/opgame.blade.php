@@ -8,17 +8,6 @@
 <div class="container">
     
     <div class="text-center">
-        <div id="Inicio" class="gameStart">
-        <div id="content">
-            <h1>¡EMPEZAMOS!</h1>
-            <button class="btn btn-lg btn-primary btn-block" onclick="startGame()">Go</button>
-            <p> Se mostraran los cuadrados que tienes que recordar</p>
-            <p> quando el borde este en Verde empieza la partida</p>
-            <p> selecciona todos los quadrados marcados en verde  en el menor tiempo posible</p>
-            <p> las celdas erroneas se marcan en rojo unos instantes</p>
-        </div>
-    </div>
-    <div class="text-center">
         <div id="Fin" class="gameEnd"> 
         <div id="content">
             <div class="row cajaFin">
@@ -105,6 +94,17 @@
             </div>
         </div>
     </div>
+    <div class="text-center">
+        <div id="Inicio" class="gameStart">
+        <div id="content">
+            <h1>¡EMPEZAMOS!</h1>
+            <button class="btn btn-lg btn-primary btn-block" onclick="startGame(@php echo $_POST['level'];@endphp+2)">Go</button>
+            <p> Se mostraran los cuadrados que tienes que recordar</p>
+            <p> quando el borde este en Verde empieza la partida</p>
+            <p> selecciona todos los quadrados marcados en verde  en el menor tiempo posible</p>
+            <p> las celdas erroneas se marcan en rojo unos instantes</p>
+        </div>
+    </div>
     <div class="game centrado">     
         <table id="table" class="table-game">
             
@@ -120,13 +120,10 @@
         var Nceles = nivel+2;
         generarTables(Nceles,Nceles);
         
-        //overlay inicial
+        //Mostramos el overlay inicial y quitamos el final.
         off("Fin");
         on("Inicio");
         
-        
-        //celes correctes
-        celesCorrectes(Nceles,Nceles);
     }
 </script>
 @endsection

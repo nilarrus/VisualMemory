@@ -12,12 +12,11 @@ Auth::routes();
 Route::get('/menu', 'HomeController@index')->name('menu');
 
 //Joc un jugador
-Route::post('/gp1', 'GamePlayerOne@game')->name('gp1');
+Route::post('/gp1', 'GamePlayerOne@launchGame')->name('gp1');
 
 Route::post('/store', 'GamePlayerOne@store')->name('store');
 
 //ruta del ranking
 Route::get('/r', 'rank@getRanking')->name('rank');
-
 
 
